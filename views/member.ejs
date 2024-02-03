@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member page</title>
+</head>
+<body>
+    <h3>member page</h3>
+    <div>歡迎<%= name %>登入</div>
+    <hr/>
+    <form method="POST" action="/postMessage">
+        我想說<input type="text" name="content"/>
+        <button>送出</button>
+    </form>
+    <hr/>
+    <% for(let i=0;i<data.length;i++){%>
+        <div>
+            <b><%= data[i].name %>:</b>
+            <%= data[i].content%>
+        </div>
+        
+    <%}%>
+    <hr/>
+    <form method="POST" action="/deleteMessage">
+        <input type="text" name="content"/>
+        <button>刪除留言</button>
+    </form>
+    
+    <a href="/signout">登出會員</a>
+    <h3>square calculation</h3>
+    <form action="/square">
+        數字<input type="text" name="num"/><br/>
+        幾次方<input type="text" name="exp"/>
+        <button>計算</button>
+    </form>
+</body>
+</html>
