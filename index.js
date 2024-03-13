@@ -1,7 +1,7 @@
 //1.準備資料庫連線
 const { MongoClient, ServerApiVersion } = require("mongodb"); //載入
 const uri =
-  "mongodb+srv://root:hsuan744172@cluster0.duewmps.mongodb.net/?retryWrites=true&w=majority"; //連線到主機
+  "mongodb+srv://root:<password>@cluster0.duewmps.mongodb.net/?retryWrites=true&w=majority"; //連線到主機
 //(通訊協定 )
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
